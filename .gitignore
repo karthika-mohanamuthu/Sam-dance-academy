@@ -1,0 +1,27 @@
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.csproj.user
+
+# Sensitive local configuration
+secrets.json
+appsettings.Local.json
+
+# Database files
+*.mdf
+*.ldf
+*.db
+*.bak
+
+# Logs
+*.log
