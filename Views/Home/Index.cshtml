@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="dance-hero">
+    <div class="dance-hero-content">
+        <span class="hero-tagline">WELCOME TO OUR DANCE ACADEMY</span>
+
+        <h1>Discover Your Rhythm.<br />Express Yourself.</h1>
+
+        <p>
+            From classical traditions to modern moves,
+            find your passion and let every step tell a story.
+        </p>
+
+        <div class="hero-buttons">
+            <a asp-controller="Home"
+               asp-action="Styles"
+               class="btn btn-primary btn-lg">
+                Explore Dance Styles
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="About"
+               class="btn btn-outline-light btn-lg">
+                About Our Academy
+            </a>
+        </div>
+    </div>
+</section>

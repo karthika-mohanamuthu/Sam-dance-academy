@@ -1,0 +1,71 @@
+﻿@model DanceAcademy.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-5 mb-5">
+    <h2 class="mb-4">Admin Dashboard</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5>Total Enquiries</h5>
+                    <h2 class="text-primary">
+                        @Model.TotalEnquiries
+                    </h2>
+                    <a asp-controller="Home"
+                       asp-action="Enquiries"
+                       class="btn btn-primary mt-2">
+                        View All Enquiries
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mb-3">Recent Enquiries</h4>
+
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Dance Style</th>
+                        <th>Submitted Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model.RecentEnquiries.Any())
+                    {
+                        @foreach (var enquiry in Model.RecentEnquiries)
+                        {
+                            <tr>
+                                <td>@enquiry.FullName</td>
+                                <td>@enquiry.Email</td>
+                                <td>@enquiry.PhoneNumber</td>
+                                <td>@enquiry.DanceStyle</td>
+                                <td>
+                                    @(enquiry.SubmittedAt?.ToString("dd-MMM-yyyy") ?? "Not available")
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">
+                                No enquiries available.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

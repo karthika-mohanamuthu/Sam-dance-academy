@@ -1,0 +1,563 @@
+
+/* Main Navigation */
+.dance-navbar {
+    background: linear-gradient(135deg, #38204f, #713b8f, #a33e70);
+    padding: 14px 0;
+}
+
+    .dance-navbar .navbar-brand {
+        color: white;
+        font-size: 1.4rem;
+        letter-spacing: 0.3px;
+    }
+
+    .dance-navbar .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+        padding: 10px 12px;
+        transition: color 0.2s ease;
+    }
+
+        .dance-navbar .nav-link:hover,
+        .dance-navbar .nav-link:focus {
+            color: #ffd166;
+        }
+
+    .dance-navbar .btn-warning {
+        border: none;
+        border-radius: 25px;
+        padding: 9px 20px;
+    }
+
+.dance-footer {
+    background: #29213d;
+    color: white;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+    .dance-footer p {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+/* Keep dance cards aligned */
+#dance-styles .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dance-styles .col-md-4 {
+    display: flex;
+}
+
+#dance-styles .card {
+    width: 100%;
+}
+
+#dance-styles .dance-card-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Full-width hero */
+
+/* Professional Home Hero */
+.dance-hero {
+    width: 100%;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    background: linear-gradient(rgba(25, 15, 35, 0.65), rgba(25, 15, 35, 0.72)), url('/images/dance-banner.png') center center / cover no-repeat;
+}
+
+.dance-hero-content {
+    max-width: 850px;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-tagline {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffd166;
+    margin-bottom: 20px;
+}
+
+.dance-hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.dance-hero-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+    .hero-buttons .btn {
+        border-radius: 30px;
+        padding: 12px 26px;
+        font-weight: 600;
+    }
+
+@media (max-width: 576px) {
+    .dance-hero {
+        min-height: 480px;
+        padding: 60px 18px;
+    }
+
+    .hero-tagline {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .dance-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Classes & Fees Page */
+.classes-section {
+    padding: 70px 0;
+    background: #faf7fc;
+}
+
+    .classes-section h2 {
+        color: #38204f;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+.classes-subtitle {
+    color: #6b6173;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.classes-section .row {
+    align-items: stretch;
+}
+
+.class-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 26px;
+    background: #fff;
+    border: 1px solid #eee5f3;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(56, 32, 79, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .class-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 32px rgba(56, 32, 79, 0.14);
+    }
+
+    .class-card h3 {
+        color: #542b70;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
+
+    .class-card p {
+        color: #62596a;
+        line-height: 1.65;
+        margin-bottom: 12px;
+    }
+
+    .class-card h4 {
+        color: #a33e70;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-top: auto;
+        padding-top: 18px;
+    }
+
+        .class-card h4 small {
+            color: #786d80;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+.classes-section .btn {
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .classes-section {
+        padding: 45px 0;
+    }
+
+    .class-card {
+        padding: 25px 22px;
+    }
+}
+
+/* Single Regular Class Pricing Card */
+.regular-class-card {
+    align-items: center;
+    padding: 40px 30px;
+}
+
+.class-badge {
+    display: inline-block;
+    background: #f5eafa;
+    color: #713b8f;
+    border-radius: 20px;
+    padding: 7px 16px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.regular-class-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.regular-class-card > p {
+    max-width: 500px;
+}
+
+.class-styles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+    .class-styles span {
+        background: #f8f3fa;
+        color: #542b70;
+        border: 1px solid #eadcf1;
+        border-radius: 20px;
+        padding: 8px 16px;
+        font-weight: 600;
+    }
+
+.class-fee {
+    width: 100%;
+    background: linear-gradient(135deg, #38204f, #713b8f);
+    border-radius: 16px;
+    padding: 22px;
+    margin: 15px 0;
+}
+
+    .class-fee h4 {
+        color: #fff;
+        font-size: 2.3rem;
+        margin: 0;
+        padding: 0;
+    }
+
+        .class-fee h4 small {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+    .class-fee p {
+        color: rgba(255, 255, 255, 0.85);
+        margin: 8px 0 0;
+    }
+
+.class-schedule {
+    margin-top: 10px;
+}
+
+    .class-schedule p {
+        margin-bottom: 8px;
+    }
+
+@media (max-width: 576px) {
+    .regular-class-card {
+        padding: 28px 18px;
+    }
+
+        .regular-class-card h3 {
+            font-size: 1.5rem;
+        }
+
+    .class-fee h4 {
+        font-size: 2rem;
+    }
+}
+
+/* About Us Page */
+.about-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+    .about-section .row {
+        align-items: stretch;
+    }
+
+    .about-section h2 {
+        color: #38204f;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 800;
+        margin-bottom: 24px;
+    }
+
+    .about-section .col-md-6:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 25px;
+    }
+
+        .about-section .col-md-6:first-child p {
+            color: #62596a;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+    .about-section .btn {
+        border-radius: 30px;
+        padding: 12px 26px;
+        font-weight: 600;
+        margin-top: 8px;
+    }
+
+.about-highlight {
+    height: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 22px;
+    color: #fff;
+    background: linear-gradient(135deg, #38204f, #713b8f, #a33e70);
+    box-shadow: 0 12px 30px rgba(56, 32, 79, 0.15);
+}
+
+    .about-highlight h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .about-highlight > p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 24px;
+}
+
+    .about-stats h4 {
+        color: #ffd166;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .about-stats p {
+        color: rgba(255, 255, 255, 0.85);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+@media (max-width: 767px) {
+    .about-section {
+        padding: 45px 0;
+    }
+
+        .about-section .col-md-6:first-child {
+            padding: 10px 12px 25px;
+        }
+
+    .about-highlight {
+        min-height: 300px;
+        padding: 28px 22px;
+    }
+
+        .about-highlight h3 {
+            font-size: 1.7rem;
+        }
+
+    .about-stats {
+        gap: 12px;
+    }
+}
+
+/* Professional Dance Gallery */
+.gallery-section {
+    padding: 75px 0;
+    background: #faf7fc;
+}
+
+.gallery-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.gallery-tagline {
+    color: #a33e70;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.gallery-heading h2 {
+    color: #38204f;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.gallery-heading p {
+    color: #6b6173;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #38204f;
+    box-shadow: 0 8px 25px rgba(56, 32, 79, 0.10);
+}
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.08);
+    }
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    color: #fff;
+    background: linear-gradient( to top, rgba(25, 15, 35, 0.85), rgba(25, 15, 35, 0.05) 75% );
+}
+
+    .gallery-overlay span {
+        color: #ffd166;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+.gallery-cta {
+    text-align: center;
+    margin-top: 65px;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eee5f3;
+}
+
+    .gallery-cta h3 {
+        color: #38204f;
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
+    .gallery-cta p {
+        color: #6b6173;
+        margin: 12px 0 25px;
+    }
+
+    .gallery-cta .btn {
+        border-radius: 30px;
+        padding: 12px 28px;
+        font-weight: 600;
+    }
+
+@media (max-width: 991px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-section {
+        padding: 45px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    .gallery-cta {
+        margin-top: 40px;
+        padding: 30px 18px;
+    }
+
+        .gallery-cta h3 {
+            font-size: 1.5rem;
+        }
+}

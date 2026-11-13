@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DanceAcademy.Models.Student>
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Student Management</h2>
+    <p class="text-muted">Manage all enrolled dance academy students.</p>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No students enrolled yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Parent Details</th>
+                        <th>Dance Style</th>
+                        <th>Class Timing</th>
+                        <th>Date of Birth</th>
+                        <th>Enrolled Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model)
+                    {
+                        <tr>
+                            <td>@student.StudentName</td>
+                            <td>
+                                <strong>@student.ParentName</strong><br />
+                                @student.ParentPhone<br />
+                                @student.ParentEmail
+                            </td>
+                            <td>@student.DanceStyle</td>
+                            <td>@student.PreferredClassTiming</td>
+                            <td>@(student.DateOfBirth?.ToString("dd-MMM-yyyy") ?? "-")</td>
+                            <td>@student.EnrolledAt.ToString("dd-MMM-yyyy")</td>
+                            <td>
+                                @if (student.IsActive)
+                                {
+                                    <span class="badge bg-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Inactive</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

@@ -1,0 +1,169 @@
+﻿@model DanceAcademy.Models.Enquiry
+
+@{
+    ViewData["Title"] = "Student Admission";
+}
+
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2>Start Your Dance Journey!</h2>
+        <p class="text-muted">Fill in the details to enquire about admission.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-8">
+            <div class="card shadow border-0 rounded-4">
+                <div class="card-body p-4 p-md-5">
+
+                    <h4 class="mb-4">Parent / Guardian Details</h4>
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    <form asp-controller="Home"
+                          asp-action="Contact"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label">
+                                Parent / Guardian Name
+                            </label>
+                            <input asp-for="FullName"
+                                   class="form-control"
+                                   placeholder="Enter parent name" />
+                            <span asp-validation-for="FullName"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label">
+                                Mobile Number
+                            </label>
+                            <input asp-for="PhoneNumber"
+                                   class="form-control"
+                                   placeholder="Enter mobile number" />
+                            <span asp-validation-for="PhoneNumber"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Email" class="form-label">
+                                Email Address
+                            </label>
+                            <input asp-for="Email"
+                                   type="email"
+                                   class="form-control"
+                                   placeholder="Enter email address" />
+                            <span asp-validation-for="Email"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <hr />
+
+                        <h4 class="my-4">Student Details</h4>
+
+                        <div class="mb-3">
+                            <label asp-for="StudentName" class="form-label">
+                                Student Name
+                            </label>
+                            <input asp-for="StudentName"
+                                   class="form-control"
+                                   placeholder="Enter student name" />
+                            <span asp-validation-for="StudentName"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DateOfBirth" class="form-label">
+                                Date of Birth
+                            </label>
+                            <input asp-for="DateOfBirth"
+                                   type="date"
+                                   class="form-control" />
+                            <span asp-validation-for="DateOfBirth"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Gender" class="form-label">
+                                Gender
+                            </label>
+                            <select asp-for="Gender" class="form-select">
+                                <option value="">-- Select Gender --</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Gender"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DanceStyle" class="form-label">
+                                Interested Dance Style
+                            </label>
+                            <select asp-for="DanceStyle" class="form-select">
+                                <option value="">-- Select Dance Style --</option>
+                                <option value="Classical Dance">Classical Dance</option>
+                                <option value="Western Dance">Western Dance</option>
+                                <option value="Kids Dance">Kids Dance</option>
+                                <option value="Folk Dance">Folk Dance</option>
+                                <option value="Hip-Hop">Hip-Hop</option>
+                                <option value="Zumba">Zumba</option>
+                            </select>
+                            <span asp-validation-for="DanceStyle"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PreferredClassTiming"
+                                   class="form-label">
+                                Preferred Class Timing
+                            </label>
+                            <select asp-for="PreferredClassTiming"
+                                    class="form-select">
+                                <option value="">-- Select Timing --</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select>
+                            <span asp-validation-for="PreferredClassTiming"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Message" class="form-label">
+                                Additional Message (Optional)
+                            </label>
+                            <textarea asp-for="Message"
+                                      class="form-control"
+                                      rows="4"
+                                      placeholder="Any additional information?"></textarea>
+                            <span asp-validation-for="Message"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary btn-lg w-100">
+                            Submit Admission Enquiry
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

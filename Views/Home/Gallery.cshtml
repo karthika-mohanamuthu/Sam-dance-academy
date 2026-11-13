@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Gallery";
+}
+
+<section class="gallery-section">
+    <div class="container">
+
+        <div class="gallery-heading">
+            <span class="gallery-tagline">MOMENTS IN MOTION</span>
+            <h2>Our Dance Gallery</h2>
+            <p>
+                Every movement tells a story.
+                Explore the passion, creativity and joy of dance.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="~/images/classical.jpg" alt="Classical Dance" />
+                <div class="gallery-overlay">
+                    <span>01</span>
+                    <h3>Classical Dance</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="~/images/western.jpg" alt="Western Dance" />
+                <div class="gallery-overlay">
+                    <span>02</span>
+                    <h3>Western Dance</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="~/images/kids.jpg" alt="Kids Dance" />
+                <div class="gallery-overlay">
+                    <span>03</span>
+                    <h3>Kids Dance</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="~/images/folk.png" alt="Folk Dance" />
+                <div class="gallery-overlay">
+                    <span>04</span>
+                    <h3>Folk Dance</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="~/images/hiphop.jpg" alt="Hip-Hop Dance" />
+                <div class="gallery-overlay">
+                    <span>05</span>
+                    <h3>Hip-Hop</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="~/images/zumba.jpg" alt="Zumba Dance" />
+                <div class="gallery-overlay">
+                    <span>06</span>
+                    <h3>Zumba</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gallery-cta">
+            <h3>Ready to Find Your Rhythm?</h3>
+            <p>Join our academy and make your own dance memories.</p>
+
+            <a asp-controller="Home"
+               asp-action="Contact"
+               class="btn btn-primary btn-lg">
+                Join Our Academy
+            </a>
+        </div>
+
+    </div>
+</section>

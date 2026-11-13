@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Classes & Fees";
+}
+
+<section id="classes" class="classes-section">
+    <div class="container">
+        <h2 class="text-center">Our Classes & Fees</h2>
+
+        <p class="text-center classes-subtitle">
+            Find your rhythm. Explore every style. Start dancing!
+        </p>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 col-xl-7">
+                <div class="class-card regular-class-card text-center">
+
+                    <span class="class-badge">ALL LEVELS WELCOME</span>
+
+                    <h3>Regular Dance Classes</h3>
+
+                    <p>
+                        Learn, grow and express yourself through
+                        a variety of dance styles.
+                    </p>
+
+                    <div class="class-styles">
+                        <span>Classical</span>
+                        <span>Western</span>
+                        <span>Hip-Hop</span>
+                        <span>Folk</span>
+                        <span>Zumba</span>
+                        <span>Kids Dance</span>
+                    </div>
+
+                    <div class="class-fee">
+                        <h4>₹1,200 <small>/ month</small></h4>
+                        <p>One regular monthly fee for all styles</p>
+                    </div>
+
+                    <div class="class-schedule">
+                        <p><strong>Days:</strong> Monday – Saturday</p>
+                        <p><strong>Timings:</strong> Based on selected class</p>
+                    </div>
+
+                    <a asp-controller="Home"
+                       asp-action="Contact"
+                       class="btn btn-primary btn-lg mt-3">
+                        Enquire Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
